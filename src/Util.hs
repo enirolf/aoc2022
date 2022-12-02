@@ -2,10 +2,10 @@ module Util where
 
 import Data.List.Split
 
-readFileStrings :: FilePath -> IO [[String]]
+readFileStrings :: FilePath -> IO [String]
 readFileStrings fp = do
   contents <- readFile fp
-  return $ chunkStrs $ lines contents
+  return $ lines contents
 
 readFileInts :: FilePath -> IO [Int]
 readFileInts fp = do

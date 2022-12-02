@@ -29,3 +29,4 @@ executable aoc2022
                        -Wredundant-constraints
   other-modules: Util
                  Day1
+                 Day2
