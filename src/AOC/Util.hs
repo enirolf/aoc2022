@@ -1,6 +1,8 @@
-module Util where
+module AOC.Util where
 
 import Data.List.Split
+
+data Mode = Test | Full deriving (Read, Show)
 
 readFileStrings :: FilePath -> IO [String]
 readFileStrings fp = do

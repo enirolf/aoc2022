@@ -1,0 +1,17 @@
+module AOC.Day{{day}} where
+
+import AOC.Util
+
+day{{day}}a :: Mode -> IO ()
+day{{day}}a mode = do
+  input <- case mode of
+    Test -> readFileStrings "data/day{{day}}_test.txt"
+    Full -> readFileStrings "data/day{{day}}.txt"
+  print input
+
+day{{day}}b :: Mode -> IO ()
+day{{day}}b mode = do
+  input <- case mode of
+    Test -> readFileStrings "data/day{{day}}_test.txt"
+    Full -> readFileStrings "data/day{{day}}.txt"
+  print input

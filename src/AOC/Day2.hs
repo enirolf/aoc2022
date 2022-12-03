@@ -1,6 +1,6 @@
-module Day2 where
+module AOC.Day2 where
 
-import Util
+import AOC.Util
 
 ------------------------------------ Part 1 ------------------------------------
 
@@ -76,15 +76,19 @@ string2roundDir str = case words str of
 roundDir2Round :: RoundDirective -> Round
 roundDir2Round rd@(RoundDirective s _) = Round s (requiredShape rd)
 
-day2a :: IO ()
-day2a = do
-  input <- readFileStrings "data/day2.txt"
+day2a :: Mode -> IO ()
+day2a mode = do
+  input <- case mode of
+    Test -> readFileStrings "data/day2_test.txt"
+    Full -> readFileStrings "data/day2.txt"
   let rounds = map string2round input
   print $ totalScore rounds
 
-day2b :: IO ()
-day2b = do
-  input <- readFileStrings "data/day2.txt"
+day2b :: Mode -> IO ()
+day2b mode = do
+  input <- case mode of
+    Test -> readFileStrings "data/day2_test.txt"
+    Full -> readFileStrings "data/day2.txt"
   let rounds = map (roundDir2Round . string2roundDir) input
   print $ totalScore rounds
 

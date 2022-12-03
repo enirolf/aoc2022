@@ -1,0 +1,29 @@
+name: aoc2022
+version: 0.1.0
+license: BSD3
+license-file: LICENSE
+github: enirolf/aoc2022
+
+dependencies:
+  - base >= 4.7 && < 5
+  - split >= 0.2
+
+ghc-options: -Wall
+
+source-dirs:
+  - src
+
+library:
+  source-dirs: src
+  dependencies:
+    - split >= 0.2
+
+executables:
+  add_day:
+    source-dirs: src
+    main: add_day.hs
+    dependencies:
+      - aeson >= 2.0
+      - process >= 1.6
+      - stache >= 2.3
+      - text >= 1.2
