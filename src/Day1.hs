@@ -2,7 +2,7 @@ module Day1 where
 
 import Util
 
-import Data.List
+import Data.List (sortBy)
 
 totalCalories :: [[Int]] -> [Int]
 totalCalories = map sum
