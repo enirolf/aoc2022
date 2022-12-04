@@ -1,6 +1,6 @@
 module AOC.Util where
 
-import Data.List.Split
+import Data.List.Split (splitOn)
 
 data Mode = Test | Full deriving (Read, Show)
 
@@ -15,7 +15,7 @@ readFileInts fp = do
   return $ map read $ lines contents
 
 chunkStrs :: [String] -> [[String]]
-chunkStrs strs = splitOn [""] strs
+chunkStrs = splitOn [""]
 
 strs2ints :: [String] -> [Int]
 strs2ints = map read
